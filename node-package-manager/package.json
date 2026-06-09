@@ -1,0 +1,16 @@
+{
+  "name": "npm-demo",
+  "version": "1.0.0",
+  "description": "for node project library usage demo",
+  "license": "ISC",
+  "author": "gullapalli jyothi kiran",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "dependencies": {
+    "lodash": "^4.18.1"
+  }
+}
