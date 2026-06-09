@@ -1,0 +1,24 @@
+
+
+const express=require("express");
+
+const authMiddlewear=require("../middleware/authMiddleware")
+
+const router=express.Router();
+
+
+// we need to create middleware to check wheater user is authentication
+
+router.get("/welcome",authMiddlewear,(req,res)=>{
+ const {  userName, userId, userRole } = req.userInfo;
+    res.status(200).json({
+        message:"Welcome to the home page",
+        userInfo:{
+            userName: userName,
+            userId:userId,
+            role:userRole
+        },
+    })
+})
+
+module.exports=router
